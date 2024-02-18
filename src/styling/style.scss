@@ -1,0 +1,311 @@
+/* Primary */
+
+$Soft-orange: hsl(35, 77%, 62%);
+$Soft-red: hsl(5, 85%, 63%);
+
+/* Neutral */
+
+$Off-white: hsl(36, 100%, 99%);
+$Grayish-blue: hsl(233, 8%, 79%);
+$Dark-grayish-blue: hsl(236, 13%, 42%);
+$Very-dark-blue: hsl(240, 100%, 5%);
+
+body {
+  font-size: 15px;
+  /*font-size: calc(15px + 0.390625vw);*/
+}
+header {
+  background-color: $Off-white;
+}
+
+.navBar {
+  @apply xl:text-[2rem]
+  flex
+  items-center
+  justify-evenly
+  h-[4vh]
+  md:w-2/4;
+  padding: 1rem 0;
+  color: $Dark-grayish-blue;
+  font-weight: 500;
+}
+.nav-menu {
+  @apply fixed
+  items-center
+  justify-center
+  gap-5;
+  width: 50%;
+  transform: translateX(100%);
+  transition: 1s ease-in;
+  text-align: left;
+  top: 0;
+}
+.logo {
+  z-index: 2;
+}
+@media screen and (max-width: 767px) {
+  .nav-toggler {
+    display: fixed;
+    z-index: 2;
+  }
+  .nav-menu {
+    position: fixed;
+    right: 0;
+    width: 60%;
+    flex-direction: column;
+    transition: 0.5s ease-in;
+    height: 200%;
+  }
+  .nav-active {
+    padding-top: 15vh;
+    background-color: $Off-white;
+    transform: translateX(0%);
+    box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.50);
+  }
+  .nav-menu > li {
+    font-size: larger;
+    color: $Very-dark-blue;
+    margin: 5vh 8vw;
+    font-weight: 600;
+  }
+  .navBar > div {
+    width: 1000px;
+    top: 0vh;
+    background-color: $Off-white;
+    position: fixed;
+    height: 15vh;
+    z-index: 1;
+  }
+  .navBar > div > img {
+    @apply end-3/4;
+    margin: 7vh 0;
+    right: 10vw;
+    position: fixed;
+    z-index: 2;
+  }
+}
+
+nav > ul > li > a:hover {
+  color: $Soft-red;
+}
+nav > ul {
+  /*
+  @apply flex
+  flex-row
+  max-md:hidden;
+*/
+}
+.nav-toggler {
+  @apply md:hidden
+  block
+  w-10
+  h-fit
+  cursor-pointer;
+  transition: 1s ease-in;
+}
+.toggle {
+  @apply h-8;
+}
+
+.custom-container {
+  @apply container
+  mx-auto
+  px-4    
+  py-6    
+  flex
+  flex-col
+  self-center
+  md:grid 
+  md:grid-rows-[6%,30%,25%,17%]
+  md:grid-cols-[25%,25%,25%] 
+  gap-y-6
+  gap-x-8
+  md:gap-y-6 
+  h-fit 
+  md:h-full 
+  w-screen 
+  content-center 
+  justify-center;
+}
+
+img {
+  height: inherit;
+  width: inherit;
+}
+p {
+  color: $Dark-grayish-blue;
+}
+
+.section-1 {
+  @apply row-start-2 
+  row-end-4 
+  col-start-3;
+  background-color: $Very-dark-blue;
+  padding: 1.5vh 2vw;
+}
+.section-1 h1 {
+  @apply font-bold;
+  /*xl:text-[5rem]
+  lg:text-[4rem]
+  md:text-[3rem]
+  md:text-[2rem]
+  sm-m:text-[1rem]
+  -s:text-[1rem];*/
+  color: $Soft-orange;
+}
+.section-1 h2 {
+  @apply font-bold
+  /*xl:text-[1.8rem]
+  lg:text-[1.3rem]
+  md:text-[1.24rem]
+  md:text-[1rem]
+  sm-m:text-xs
+  -s:text-xs;*/;
+  color: $Off-white;
+  padding-top: 1.8vw;
+}
+.section-1 h2:hover {
+  color: $Soft-orange;
+  cursor: pointer;
+}
+.section-1 > fragment > p {
+  @apply xl:text-[1.4rem]
+  /*lg:text-[1.05rem]
+  md:text-[1.2rem]
+  md:text-[0.9rem]
+  sm-m:text-[]
+  -s:text-[];*/;
+  font-weight: 400;
+  padding: 1.5vh 0 2.5vh;
+  border-bottom: solid 1px $Dark-grayish-blue;
+  color: $Grayish-blue;
+}
+.section-1 > fragment:nth-child(4) > p {
+  border: none;
+}
+.section-2 > h1 {
+  @apply leading-none 
+  /*xl:text-[5rem]
+  lg:text-[4.5rem]
+  md:text-[4rem]
+  md:text-[3.2rem]
+  sm-m:text-[]
+  -s:text-[]*/
+  row-start-3 
+  col-start-1 
+  font-bold;
+  color: $Very-dark-blue;
+}
+.section-3 {
+  @apply row-start-3 
+  col-start-2 
+  flex 
+  justify-between 
+  flex-col
+  /*xl:text-[1.5rem]
+  lg:text-[1.15rem]
+  md:text-[1.06rem]
+  md:text-[0.95rem]
+  sm-m:text-[]
+  -s:text-[];*/;
+}
+.section-3 button {
+  @apply md:w-3/5
+  /*xl:text-[1.3rem]
+  md:text-[1.2rem]
+  md:p-[1rem]
+  md:text-[1rem]
+  sm-m:text-[]
+  -s:text-[];*/;
+  text-align: center;
+  background-color: $Soft-red;
+  color: $Off-white;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+.section-3 button:hover {
+  background-color: $Very-dark-blue;
+}
+
+.fragmento-1 {
+  @apply col-start-1
+  p-3 
+  col-end-2 
+  row-start-4
+  flex;
+}
+.info {
+  @apply h-full
+  flex
+  flex-col
+  justify-between
+  leading-6
+  self-end;
+}
+
+.fragmento-2 {
+  @apply col-start-2 
+  p-3 
+  col-end-3 
+  row-start-4
+  flex;
+}
+.fragmento-3 {
+  @apply col-start-3 
+  p-3 
+  col-end-4 
+  row-start-4
+  flex;
+}
+.info h2 {
+  font-weight: 600;
+  color: $Grayish-blue;
+  @apply xl:text-[3rem]
+  /*lg:text-[2.5rem]
+  md:text-[2rem]
+  md:text-[1.5rem]
+  sm-m:text-[]
+  -s:text-[];*/;
+}
+.info h3 {
+  font-weight: 700;
+  color: $Very-dark-blue;
+  @apply xl:text-[1.7rem]
+  /*lg:text-[1.2rem]
+  md:text-[1.1rem]
+  md:text-[0.9rem]
+  md:leading-[1.2rem]
+  sm-m:text-[]
+  -s:text-[];*/;
+}
+.info p {
+  font-weight: 500;
+  @apply xl:text-[1.4rem]
+  /*lg:text-[1rem]
+  md:text-[1rem]
+  md:leading-[1.3rem]
+  md:text-[0.8rem]
+  md:leading-[1rem]
+  sm-m:text-[]
+  -s:text-[];*/;
+}
+
+fragment > img {
+  height: -webkit-fill-available;
+  margin-right: 1.5vw;
+}
+
+/* MEDIAS QUERIES 
+
+@media only screen and (max-width: 768px) {
+  .custom-container {
+    @apply mx-auto  
+    h-fit
+    w-4/5 
+    content-center 
+    flex
+    flex-col
+    self-center
+    justify-center;
+  }
+}*/

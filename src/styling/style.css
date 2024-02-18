@@ -1,0 +1,164 @@
+/* Primary */
+/* Neutral */
+.custom-container {
+  @apply container 
+  mx-auto 
+  grid 
+  grid-rows-[6%,30%,25%,17%]
+  grid-cols-[25%,25%,25%] 
+  gap-[3.5vh] 
+  h-full 
+  w-full 
+  content-center 
+  justify-center;
+}
+
+img {
+  height: inherit;
+  width: inherit;
+}
+
+p {
+  font-size: 15px;
+  color: hsl(236, 13%, 42%);
+}
+
+.section-1 h1 {
+  color: hsl(35, 77%, 62%);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.section-1 h2 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: hsl(36, 100%, 99%);
+  padding-top: 1rem;
+}
+
+.section-1 h2:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+
+.section-1 fragment > p {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 1.5vh 0 3vh;
+  border-bottom: solid 1px hsl(236, 13%, 42%);
+}
+
+.section-1 > fragment:nth-child(4) > p {
+  border: none;
+}
+
+nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  color: hsl(236, 13%, 42%);
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+nav > a:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.section-1 {
+  @apply row-start-2 
+  row-end-4 
+  col-start-3;
+  background-color: hsl(240, 100%, 5%);
+  padding: 1.5vh 2vw;
+}
+
+.section-2 > h1 {
+  @apply leading-snug 
+  lg:text-6xl 
+  md:text-5xl 
+  md:text-4xl
+  sm-m:text-3xl
+  row-start-3 
+  col-start-1 
+  font-bold;
+  color: hsl(240, 100%, 5%);
+}
+
+.section-3 {
+  @apply row-start-3 
+  col-start-2 
+  flex 
+  justify-between 
+  flex-col;
+}
+
+.section-3 button {
+  text-align: center;
+  background-color: hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  padding: 1rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 15px;
+  width: 55%;
+}
+
+.section-3 button:hover {
+  background-color: hsl(240, 100%, 5%);
+}
+
+.fragmento-1 {
+  @apply col-start-1 
+  col-end-2 
+  row-start-4
+  flex;
+}
+
+.info {
+  @apply h-full
+  flex
+  flex-col
+  justify-between
+  leading-6
+  self-end;
+}
+
+.fragmento-2 {
+  @apply col-start-2 
+  col-end-3 
+  row-start-4
+  flex;
+}
+
+.fragmento-3 {
+  @apply col-start-3 
+  col-end-4 
+  row-start-4
+  flex;
+}
+
+.info h3 {
+  font-weight: 700;
+  color: hsl(240, 100%, 5%);
+  font-size: 1.2rem;
+}
+
+.info h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: hsl(233, 8%, 79%);
+}
+
+.info p {
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+fragment > img {
+  height: -webkit-fill-available;
+  margin-right: 1.5vw;
+  /*float: left;*/
+} /*# sourceMappingURL=style.css.map */
